@@ -21,14 +21,38 @@ jQuery(function(){
         });
 		
 		$('#map').vectorMap({
+			backgroundColor: "#4e5d6c",
 			panOnDrag: true,
+			regionStyle: {
+			  initial: {
+				fill: "#ebebeb",
+				"fill-opacity": 1,
+				stroke: 'none',
+				"stroke-width": 0,
+				"stroke-opacity": 1
+			  },
+			  hover: {
+				"fill-opacity": 0.8,
+				cursor: 'pointer'
+			  },
+			  selected: {
+				fill: 'yellow'
+			  },
+			  selectedHover: {
+			  }
+			},
 			onRegionClick: function(event, code){           
 				var name = (code);
 				listPeoples(data[code]);
+				var map = $('#map').vectorMap('get', 'mapObject');
+				map.setFocus({region:code})
+				$('#map').dblclick(function(){
+					map.setFocus({x:1,y:1,scale:1})
+				})
 			},
 			series: {
 				regions: [{
-					scale: ['#0071A4'],
+					scale: ['#2b3e50'],
 					normalizeFunction: 'polynomial',
 					values: countries
 				}]
@@ -39,8 +63,7 @@ jQuery(function(){
 
 function listPeoples(data){
 	var $ = jQuery;
-	var list = "<ul>";
-	
+	var list = "<h4>Results:</h4><ul>";
 	if(data){
 		$.each(data, function(key, val) {
 			list = list + '<li>' + val + '</li>';
@@ -52,4 +75,5 @@ function listPeoples(data){
 	list = list + '</ul>';
 	
 	$("#list").html(list);
+	$('#description').html("");
 }
