@@ -52,7 +52,7 @@ jQuery(function(){
 			},
 			series: {
 				regions: [{
-					scale: ['#2b3e50'],
+					scale: ['#ba007f'],
 					normalizeFunction: 'polynomial',
 					values: countries
 				}]
