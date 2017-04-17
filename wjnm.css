@@ -1,0 +1,32 @@
+/**
+ * World Job Network Map
+ *
+ * Omer Citak - www.omercitak.com - @Om3rCitak
+ *
+ */
+ 
+#map{
+	width:70%;
+	float:left;
+}
+
+#results{
+	position:relative;
+	width:30%;
+	height:100%;
+	float:left;
+}
+
+#results h2{
+	text-align: center;
+}
+
+#results h4{
+	padding-left:10px;
+}
+
+#credit{
+	font-size:12px;
+	position: absolute;
+	bottom: 0;
+}
