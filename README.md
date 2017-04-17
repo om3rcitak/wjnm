@@ -3,4 +3,4 @@
 This map lists people who work in different countries around the world and want to help developers who want to move to those countries.
 
 ## How to add new people?
-Ez, just send pull-request to [data.json](https://github.com/Om3rCitak/wjnm/blob/gh-pages/data.json) file :)
+Ez, just send pull-request to [data.json](https://github.com/Om3rCitak/wjnm/edit/gh-pages/data.json) file :)
