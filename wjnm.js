@@ -4,11 +4,12 @@
 * Omer Citak - www.omercitak.com - @Om3rCitak
 *
 */
+var description = "This map lists people who work in different countries around the world and want to help developers who want to move to those countries.";
 
 jQuery.noConflict();
 jQuery(function(){
 	var $ = jQuery;
-
+	$('#description').html(description);
 	var height = $(document).height();  
 	$('#map').height(height);
 	$('#results').height(height);
@@ -48,11 +49,15 @@ jQuery(function(){
 				map.setFocus({region:code})
 				$('#map').dblclick(function(){
 					map.setFocus({x:1,y:1,scale:1})
+					$("#list").html("");
+					$("#list").removeClass("fadeInUp animated");
+					$("#description").addClass("fadeInUp animated");
+					$('#description').html(description);
 				})
 			},
 			series: {
 				regions: [{
-					scale: ['#2b3e50'],
+					scale: ['#ba007f'],
 					normalizeFunction: 'polynomial',
 					values: countries
 				}]
@@ -75,5 +80,7 @@ function listPeoples(data){
 	list = list + '</ul>';
 	
 	$("#list").html(list);
+	$("#list").addClass("fadeInUp animated");
 	$('#description').html("");
+	$('#description').removeClass("fadeInUp animated");
 }
