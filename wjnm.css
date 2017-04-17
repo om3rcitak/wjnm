@@ -29,4 +29,13 @@
 	font-size:12px;
 	position: absolute;
 	bottom: 0;
+	left:1%;
+}
+
+#list{
+	padding:3%;
+}
+
+#description{
+	padding:3%;
 }
