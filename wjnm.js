@@ -13,7 +13,7 @@ jQuery(function(){
 	$('#map').height(height);
 	$('#results').height(height);
 
-	$.getJSON("https://raw.githubusercontent.com/Om3rCitak/wjnm/gh-pages/data.json").done(function (data) {
+	$.getJSON("data.json").done(function (data) {
 		var countries = {};
 		
 		$.each(data, function(key, val) {
