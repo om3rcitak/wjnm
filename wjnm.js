@@ -46,7 +46,7 @@ function listPeoples(data){
 			list = list + '<li>' + val + '</li>';
 		});
 	}else{
-		list = list + '<li> :( none. <a href="https://github.com/Om3rCitak/wjnm/edit/master/data.json">add?</a></li>';
+		list = list + '<li> :( none. <a href="https://github.com/Om3rCitak/wjnm/blob/gh-pages/data.json">add?</a></li>';
 	}
 	
 	list = list + '</ul>';
