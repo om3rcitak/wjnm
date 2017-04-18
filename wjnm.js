@@ -45,6 +45,7 @@ jQuery(function(){
 			onRegionClick: function(event, code){           
 				var name = (code);
 				listPeoples(data[code]);
+				/*
 				var map = $('#map').vectorMap('get', 'mapObject');
 				map.setFocus({region:code})
 				$('#map').dblclick(function(){
@@ -54,6 +55,7 @@ jQuery(function(){
 					$("#description").addClass("fadeInUp animated");
 					$('#description').html(description);
 				})
+				*/
 			},
 			series: {
 				regions: [{
