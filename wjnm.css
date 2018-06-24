@@ -45,6 +45,10 @@
 
 .mtitle {
     font-weight: bold;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.20);
-    padding-bottom: 20px;
+    border-bottom: 5px solid rgba(255, 255, 255, 0.20);
+    padding: 20px 0;
+}
+
+#list > ul > li > a {
+	color: #ffd300;
 }

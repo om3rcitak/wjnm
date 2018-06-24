@@ -14,7 +14,8 @@ jQuery(function(){
 	$('#map').height(height);
 	$('#results').height(height);
 
-	$.getJSON("data.json").done(function (data) {
+	$.getJSON("data.json")
+	.done(function (data) {
 		var countries = {};
 		
 		$.each(data, function(key, val) {
@@ -59,12 +60,15 @@ jQuery(function(){
 			},
 			series: {
 				regions: [{
-					scale: ['#ba007f'],
+					scale: ['#ffd300'],
 					normalizeFunction: 'polynomial',
 					values: countries
 				}]
 			}
 		});
+	})
+	.error(function () {
+		console.log('json format error.');
 	});
 })
 
