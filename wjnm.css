@@ -15,10 +15,15 @@
 	width:30%;
 	height:100%;
 	float:left;
+	overflow-y: scroll;
 }
 
 #results h2{
 	text-align: center;
+    	position: sticky;
+    	top: 0;
+    	z-index: 9;
+    	background: #2B3E50;
 }
 
 #results h4 {
@@ -29,9 +34,7 @@
 
 #credit{
 	font-size:12px;
-	position: absolute;
-	bottom: 0;
-	left:1%;
+	text-align: center;
 }
 
 #list {
